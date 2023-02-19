@@ -9,6 +9,55 @@ Button component
 
 ##### Usage
 `import Button from '@imadys/button'`
+
+### Colors 
+- primary
+- secondary
+- info
+- warning
+- danger
+
+
 `
-          <Button color="primary" size="lg" rounded={true} outline={true}>Primary</Button>
+  <Button color="primary">Primary</Button>
+`
+
+### sizes 
+- xs
+- sm
+- md
+- lg
+- xl
+
+
+`
+  <Button color="primary" size="md">Primary</Button>
+`
+
+### to add radius 
+
+`
+  <Button color="primary" size="md" rounded={true}>Primary</Button>
+`
+
+### to make the button outlined  
+
+`
+  <Button color="primary" size="md" outline={true}>Primary</Button>
+`
+
+### to make the button disabled  
+
+`
+  <Button color="primary" size="md" disabled={true}>Primary</Button>
+`
+
+### to make event on click
+`
+  <Button click={() => { alert('its working!') }} color="danger" size="lg">Button with event</Button>
+`
+
+### to add icon
+`
+  <Button setIcon={{ icon: <FontAwesomeIcon icon={faBell} />, direction: 'right' }}>Button with event</Button>
 `
