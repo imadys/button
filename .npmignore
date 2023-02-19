@@ -1,2 +1,5 @@
 src/Button/index.test.js
 src/App.jsx
+babel.config.cjs
+vite.config.cjs
+coverage
