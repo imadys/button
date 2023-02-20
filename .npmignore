@@ -3,3 +3,4 @@ src/App.jsx
 babel.config.cjs
 vite.config.cjs
 coverage
+package.json
