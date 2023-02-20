@@ -4,3 +4,5 @@ babel.config.cjs
 vite.config.cjs
 coverage
 package.json
+jest.config.cjs
+/src/setupTests.js

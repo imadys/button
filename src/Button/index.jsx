@@ -1,9 +1,9 @@
-function Button({ children, click = () => { }, color = "", rounded = true, size = "", outline = false, disabled = false, setIcon = {} }) {
+function Button(props) {
     return (
-        <button onClick={click} disabled={disabled} className={`btn btn-${color}${outline ? '-outline' : ''} ${size ? 'btn-' + size : ''} ${rounded ? 'rounded-md' : ''} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}>
-            {setIcon.direction == 'left' && setIcon.icon}
-            {children}
-            {setIcon.direction == 'right' && setIcon.icon}
+        <button onClick={props.onClick} autoFocus={props.autofocus} type={props.type} disabled={props.disabled} className={`btn btn-${props.color}${props.outline ? '-outline' : ''} ${props.size ? 'btn-' + props.size : ''} ${props.rounded ? 'rounded-md' : ''} ${props.className ? props.className : ''}`}>
+            {props.iconDirection == "right" && props.icon}
+            {props.children}
+            {props.iconDirection == "left" && props.icon}
         </button>
     )
 }
