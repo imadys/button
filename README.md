@@ -1,16 +1,16 @@
-Button component  
+Button component
 
-- Tailwindcss is required 
+- Tailwindcss is required
 - if you are using vite you can use this example [here](https://github.com/imadys/button-component "link")
 - [live preview](https://button-component-kohl.vercel.app/ "@imadys/dropdown")
-
+##### The styles in requered.css file is required .. you will need to copy it and paste it into your tailwind css file
 ##### To install the package
 `npm install @imadys/button`
 
 ##### Usage
 `import Button from '@imadys/button'`
 
-### Colors 
+### Colors
 - primary
 - secondary
 - info
@@ -22,7 +22,7 @@ Button component
   <Button color="primary">Primary</Button>
 `
 
-### sizes 
+### sizes
 - xs
 - sm
 - md
@@ -34,19 +34,19 @@ Button component
   <Button color="primary" size="md">Primary</Button>
 `
 
-### to add radius 
+### to add radius
 
 `
   <Button color="primary" size="md" rounded={true}>Primary</Button>
 `
 
-### to make the button outlined  
+### to make the button outlined
 
 `
   <Button color="primary" size="md" outline={true}>Primary</Button>
 `
 
-### to make the button disabled  
+### to make the button disabled
 
 `
   <Button color="primary" size="md" disabled={true}>Primary</Button>
