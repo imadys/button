@@ -6,3 +6,5 @@ coverage
 package.json
 jest.config.cjs
 /src/setupTests.js
+package.json
+example

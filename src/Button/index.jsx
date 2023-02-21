@@ -1,4 +1,5 @@
-const classes = ["btn",
+const classes = [
+    "btn",
     "btn-xs",
     "btn-sm",
     "btn-md",
@@ -30,7 +31,6 @@ function Button(
         disabled,
         onClick,
         ...props
-
     }
 ) {
 
