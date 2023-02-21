@@ -5,6 +5,13 @@ import path from "node:path";
 import react from '@vitejs/plugin-react'
 export default defineConfig({
     plugins: [react()],
+    rollupOptions: {
+        input: 'src/index.js',
+        output: {
+            file: 'dist/index.js',
+            format: 'cjs',
+        }
+    },
     build: {
         lib: {
             entry: path.resolve(__dirname, "src/Button"),
