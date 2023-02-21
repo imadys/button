@@ -1,10 +1,43 @@
-function Button(props) {
+import { useCallback } from "react";
+
+function Button(
+    {
+        color,
+        outline,
+        size,
+        rounded,
+        className,
+        icon,
+        iconDirection,
+        children,
+        type = "button",
+        disabled,
+        onClick,
+        ...props
+
+    }
+) {
+
+    const onClickHandler = useCallback((e) => {
+        if (disabled) {
+            return
+        }
+        onClick?.(e)
+    }, [onClick, disabled])
+
     return (
-        <button onClick={props.onClick} autoFocus={props.autofocus} type={props.type} disabled={props.disabled} className={`btn btn-${props.color}${props.outline ? '-outline' : ''} ${props.size ? 'btn-' + props.size : ''} ${props.rounded ? 'rounded-md' : ''} ${props.className ? props.className : ''}`}>
-            {props.iconDirection == "right" && props.icon}
-            {props.children}
-            {props.iconDirection == "left" && props.icon}
+        <button
+            type={type}
+            disabled={disabled}
+            onClick={onClickHandler}
+            className={`btn btn-${color}${outline ? '-outline' : ''} ${size ? 'btn-' + size : ''} ${rounded ? 'rounded-md' : ''} ${className ? className : ''}`}
+            {...props}
+        >
+            {iconDirection === "right" && icon}
+            {children}
+            {iconDirection === "left" && icon}
         </button>
     )
 }
+
 export default Button
