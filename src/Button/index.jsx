@@ -1,5 +1,21 @@
-import { useCallback } from "react";
-import '../index.css'
+const classes = ["btn",
+    "btn-xs",
+    "btn-sm",
+    "btn-md",
+    "btn-lg",
+    "btn-xl",
+    "btn-primary",
+    "btn-secondary",
+    "btn-success",
+    "btn-danger",
+    "btn-warning",
+    "btn-info",
+    "btn-primary-outline",
+    "btn-secondary-outline",
+    "btn-success-outline",
+    "btn-danger-outline",
+    "btn-warning-outline",
+    "btn-info-outline"];
 function Button(
     {
         color,
@@ -18,12 +34,12 @@ function Button(
     }
 ) {
 
-    const onClickHandler = useCallback((e) => {
+    const onClickHandler = (e) => {
         if (disabled) {
             return
         }
         onClick?.(e)
-    }, [onClick, disabled])
+    };
 
     return (
         <button
