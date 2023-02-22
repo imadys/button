@@ -1,6 +1,6 @@
 {
   "name": "@imadys/button",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Button component for react",
   "main": "./dist/button.umd.js",
   "module": "./dist/button.es.js",
@@ -8,8 +8,12 @@
     ".": {
       "import": "./dist/button.es.js",
       "require": "./dist/button.umd.js"
+    },
+    "./core": {
+      "require": "./dist/core/index.js"
     }
   },
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -8,3 +8,5 @@ jest.config.cjs
 /src/setupTests.js
 package.json
 example
+tailwind.config.cjs
+src

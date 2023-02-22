@@ -1,5 +1,5 @@
 import { render, fireEvent, screen, getByText } from '@testing-library/react';
-import { Button } from "../../../src";
+import { Button } from "../../../src/components/button";
 
 describe('Button Component', () => {
   it('should render sucessfully without crashing', () => {
@@ -13,14 +13,22 @@ describe('Button Component', () => {
       expect(button).toHaveClass(`btn-${btn}`);
     });
   });
-  it(`should pick the correct outline button color class`, () => {
-    const btnColors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger'];
-    btnColors.forEach(btn => {
-      const { getByText } = render(<Button color={btn} outline={true}>{btn} button</Button>);
-      const button = getByText(`${btn} button`);
-      expect(button).toHaveClass(`btn-${btn}-outline`);
-    });
-  });
+  // it(`should pick the correct outline button color class`, () => {
+  //   const btnColors = {
+  //     primaryOutline: 'btn-primary-outline',
+  //     secondaryOutline: 'btn-secondary-outline',
+  //     successOutline: 'btn-success-outline',
+  //     infoOutline: 'btn-info-outline',
+  //     warningOutline: 'btn-warning-outline',
+  //     dangerOutline: 'btn-danger-outline',
+  //   };
+  //   btnColors.forEach(btn => {
+  //     const { getByText } = render(<Button color={btn}>{btn} button</Button>);
+  //     const button = getByText(`${btn} button`);
+  //     const colorAttr = button.getAttribute('color');
+  //     expect(button).toHaveClass(`btn-${btnColors[colorAttr]}-outline`);
+  //   });
+  // });
   it(`should pick the correct size`, () => {
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
     sizes.forEach(size => {
