@@ -23,33 +23,12 @@ function Button(
         onClick?.(e)
     };
 
-    const colorVariants = {
-        primary: 'btn-primary',
-        secondary: 'btn-secondary',
-        success: 'btn-success',
-        info: 'btn-info',
-        warning: 'btn-warning',
-        danger: 'btn-danger',
-        primaryOutline: 'btn-primary-outline',
-        secondaryOutline: 'btn-secondary-outline',
-        successOutline: 'btn-success-outline',
-        infoOutline: 'btn-info-outline',
-        warningOutline: 'btn-warning-outline',
-        dangerOutline: 'btn-danger-outline',
-    }
-    const sizes = {
-        xs : 'btn-xs',
-        sm : 'btn-sm',
-        md : 'btn-md',
-        lg : 'btn-lg',
-        xl : 'btn-xl',
-    }
     return (
         <button
             type={type}
             disabled={disabled}
             onClick={onClickHandler}
-            className={`btn ${colorVariants[color]} ${size ? sizes[size] : ''} ${rounded ? 'rounded-md' : ''} ${className ? className : ''}`}
+            className={`btn btn-${color}${outline ? '-outline' : ''} ${size ? 'btn-' + size : ''} ${rounded ? 'rounded-md' : ''} ${className ? className : ''}`}
             {...props}
         >
             {iconDirection === "right" && icon}
