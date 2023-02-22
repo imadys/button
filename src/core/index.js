@@ -1,8 +1,6 @@
 const plugin = require('tailwindcss/plugin');
 
-module.exports = plugin(function ({
-                                      addComponents
-                                  }) {
+const buttonColors = plugin(function ({ addComponents }) {
     addComponents({
         '.btn': {
             '@apply py-1.5 px-3 transition-all outline-none flex items-center gap-2': {}
@@ -60,3 +58,6 @@ module.exports = plugin(function ({
         },
     })
 });
+
+
+module.exports = buttonColors;

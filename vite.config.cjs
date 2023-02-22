@@ -6,12 +6,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
     plugins: [
         react(),
-        /*viteStaticCopy({
+        viteStaticCopy({
             targets: [{
                 src: './src/core/index.js',
                 dest: 'core'
             }]
-        })*/
+        })
     ],
     build: {
         lib: {

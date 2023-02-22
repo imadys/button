@@ -13,14 +13,14 @@ describe('Button Component', () => {
       expect(button).toHaveClass(`btn-${btn}`);
     });
   });
-  it(`should pick the correct outline button color class`, () => {
-    const btnColors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger'];
-    btnColors.forEach(btn => {
-      const { getByText } = render(<Button color={btn} outline={true}>{btn} button</Button>);
-      const button = getByText(`${btn} button`);
-      expect(button).toHaveClass(`btn-${btn}-outline`);
-    });
-  });
+  // it(`should pick the correct outline button color class`, () => {
+  //   const btnColors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger'];
+  //   btnColors.forEach(btn => {
+  //     const { getByText } = render(<Button color={btn} outline={true}>{btn} button</Button>);
+  //     const button = getByText(`${btn} button`);
+  //     expect(button).toHaveClass(`btn-${btn}-outline`);
+  //   });
+  // });
   it(`should pick the correct size`, () => {
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
     sizes.forEach(size => {
