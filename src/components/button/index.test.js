@@ -1,5 +1,5 @@
 import { render, fireEvent, screen, getByText } from '@testing-library/react';
-import Button from ".";
+import { Button } from "../../../src";
 
 describe('Button Component', () => {
   it('should render sucessfully without crashing', () => {
